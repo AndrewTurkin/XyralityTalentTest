@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="XyralityTalentTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="Login" customModule="XyralityTalentTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,30 +21,33 @@
                                 <rect key="frame" x="179.5" y="150" width="241" height="300"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="example@mail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qf6-WV-KYH">
-                                        <rect key="frame" x="20" y="48.5" width="201" height="30"/>
+                                        <rect key="frame" x="20" y="48" width="201" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ZG-4s-PoN">
-                                        <rect key="frame" x="20" y="20" width="42" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ZG-4s-PoN">
+                                        <rect key="frame" x="20" y="20" width="41" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goN-3s-gQN">
-                                        <rect key="frame" x="20" y="103.5" width="74" height="20.5"/>
+                                        <rect key="frame" x="20" y="103" width="74" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9RO-Bj-hXw">
-                                        <rect key="frame" x="101" y="193" width="38" height="30"/>
+                                        <rect key="frame" x="101" y="192.5" width="38" height="30"/>
                                         <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xO8-pr-ylK"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OXb-P5-d8D">
-                                        <rect key="frame" x="20" y="132" width="201" height="30"/>
+                                        <rect key="frame" x="20" y="131.5" width="201" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -76,17 +79,19 @@
                     <navigationItem key="navigationItem" id="0So-Pf-q5u"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <segue destination="gbp-za-2yO" kind="show" identifier="LoginSegue" id="aps-q0-HLZ"/>
+                        <outlet property="emailTextField" destination="qf6-WV-KYH" id="uwa-cj-ZvS"/>
+                        <outlet property="passwordTextField" destination="OXb-P5-d8D" id="mhG-oX-j1I"/>
+                        <segue destination="gbp-za-2yO" kind="show" identifier="ShowWorldsSegue" id="aps-q0-HLZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1152" y="368"/>
         </scene>
-        <!--View Controller-->
+        <!--Worlds-->
         <scene sceneID="pBK-Uo-G5y">
             <objects>
-                <viewController id="gbp-za-2yO" sceneMemberID="viewController">
+                <viewController id="gbp-za-2yO" customClass="Worlds" customModule="XyralityTalentTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pv8-c7-NrG"/>
                         <viewControllerLayoutGuide type="bottom" id="gmz-4f-2Qn"/>
@@ -108,6 +113,9 @@
                             <constraint firstItem="gmz-4f-2Qn" firstAttribute="top" secondItem="LN4-Kb-irf" secondAttribute="bottom" id="zq5-yQ-6rx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="LN4-Kb-irf" id="5H5-eI-oih"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B65-FI-psg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
