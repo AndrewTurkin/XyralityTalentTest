@@ -18,6 +18,7 @@
 		DC01690C1C76656900260DF6 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC01690B1C76656900260DF6 /* World.swift */; };
 		DC01690E1C76706D00260DF6 /* WorldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC01690D1C76706D00260DF6 /* WorldCell.xib */; };
 		DC0169101C7671F800260DF6 /* WorldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC01690F1C7671F800260DF6 /* WorldCell.swift */; };
+		DC0169131C7676AB00260DF6 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0169121C7676AB00260DF6 /* APIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		DC01690B1C76656900260DF6 /* World.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 		DC01690D1C76706D00260DF6 /* WorldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorldCell.xib; sourceTree = "<group>"; };
 		DC01690F1C7671F800260DF6 /* WorldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldCell.swift; sourceTree = "<group>"; };
+		DC0169121C7676AB00260DF6 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		EDF429B35CDE3B198A81AE8A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +89,7 @@
 		DC0168CB1C76559A00260DF6 /* XyralityTalentTest */ = {
 			isa = PBXGroup;
 			children = (
+				DC0169111C76769F00260DF6 /* Controllers */,
 				DC0168FB1C76581C00260DF6 /* Worlds */,
 				DC0169071C76586A00260DF6 /* Login */,
 				DC01690A1C76655B00260DF6 /* Models */,
@@ -139,6 +142,14 @@
 				DC01690B1C76656900260DF6 /* World.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DC0169111C76769F00260DF6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DC0169121C7676AB00260DF6 /* APIClient.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +281,7 @@
 				DC0169021C76581C00260DF6 /* Worlds.swift in Sources */,
 				DC01690C1C76656900260DF6 /* World.swift in Sources */,
 				DC0168FD1C76581C00260DF6 /* AppDelegate.swift in Sources */,
+				DC0169131C7676AB00260DF6 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
